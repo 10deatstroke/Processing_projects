@@ -11,7 +11,7 @@ class XY_plot {
     circle(x_origin, y_origin, 3);
   }
 
-  float get_left_margin(void) {
+  float get_left_margin() {
     return left_margin;
   }
   float get_right_margin() {
@@ -23,7 +23,7 @@ class XY_plot {
   float get_bottom_margin() {
     return bottom_margin;
   }
- //<>//
+
   void Initialize_axis() {
     //  Initializing X - axis
     line(x_origin, y_origin, right_margin, y_origin);
@@ -32,18 +32,18 @@ class XY_plot {
   }
 
   void plot(float x1_point, float y1_point, float x2_point, float y2_point) {
-    if (x1_point <= left_margin) {
-      x1_point = left_margin;
-    }
-    if (x2_point >= right_margin) {
-      x2_point = right_margin;
-    }
-    if (y1_point <= top_margin) {
-      y1_point = top_margin;
-    }
-    if (y2_point >= bottom_margin) {
-      y2_point = bottom_margin;
-    }
+    //if (x1_point <= left_margin) {
+    //  x1_point = left_margin;
+    //}
+    //if (x2_point >= right_margin) {
+    //  x2_point = right_margin;
+    //}
+    //if (y1_point <= top_margin) {
+    //  y1_point = top_margin;
+    //}
+    //if (y2_point >= bottom_margin) {
+    //  y2_point = bottom_margin;
+    //}
     line(x1_point, y1_point, x2_point, y2_point);
     fill(255);
     circle(x2_point, y2_point, 5);
